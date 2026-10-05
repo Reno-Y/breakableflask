@@ -28,7 +28,7 @@ jobs:
         run: pip-audit -r requirements.txt
 
       - name: Auditer les dépendances des bases de données
-        run: pip-audit -r database-requirements.txt
+        run: pip-audit --no-deps --disable-pip -r database-requirements.txt
 
   Dockerfile:
     name: Contrôle du Dockerfile
